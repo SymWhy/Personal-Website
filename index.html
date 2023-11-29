@@ -10,23 +10,42 @@
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
     body {
+        background-color: #130f4d;
         color: #fff;
-        background-color: #1c0336;
-        display: block;
-        /*background-color: #130f4d;*/
+        width: 100%;
     }
 
     #header {
-        background-color: inherit;
+        background-color: #1c0336;
         position: sticky;
         top: 0;
         text-align: center;
         padding-top: 7%;
         padding-bottom: 3%;
-        width: 100%;
+        margin-bottom: 3%;
+        width: inherit;
         font-size: xx-large;
         font-family: 'Montserrat', sans-serif;
     }
+
+    .wrapper {
+        position: relative;
+        width: inherit;
+        display: grid;
+        grid-template-columns: 20% 20%;
+        gap: 2%;
+        text-align: center;
+        z-index: -999;
+        justify-content: center;
+    }
+
+    h4 {
+      position: relative;
+      font-weight: unset;
+      top: -50%;
+      margin: unset;
+    }
+
 
 </style>
 
@@ -36,25 +55,29 @@
         <div id="name">Sym Whysel</div>
     </div>
 
-    <div class="infobox" id="concept">
-        <img src="http://placekitten.com/300/200" alt="Design Concepts"  style="width:100%;">
-        Design Concepts
+    <div class="wrapper">
+
+    <div class="infobox">
+        <img src="http://placekitten.com/300/200" alt="Design Concepts">
+        <h4>Design Concepts</h4>
     </div>
 
-    <div class="infobox" id="fashion">
-        <img src="http://placekitten.com/300/200" alt="Fashion Design"  style="width:100%;">
-        Fashion Design
-        </div>
+    <div class="infobox">
+        <img src="http://placekitten.com/300/200" alt="Fashion Design">
+        <h4>Fashion Design</h4>
+    </div>
 
-    <div class="infobox" id="technical">
-        <img src="http://placekitten.com/300/200" alt="Technical Design"  style="width:100%;">
-        Technical Design
-        </div>
+    <div class="infobox">
+        <img src="http://placekitten.com/300/200" alt="Technical Design">
+        <h4>Technical Design</h4>
+    </div>
 
-    <div class="infobox" id="construct">
-        <img src="http://placekitten.com/300/200" alt="Garment Construction"  style="width:100%;">
-        Garment Construction
-        </div>
+    <div class="infobox">
+        <img src="http://placekitten.com/300/200" alt="Garment Construction">
+        <h4>Garment Construction</h4>
+    </div>
+    
+    </div>
 
 </body>
 </html> 
