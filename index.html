@@ -40,49 +40,45 @@
     }  
 
     .pic-button {
-        width: 300px;
-        height: 200px;
-        opacity: 100%;
-        transition: opacity 1s;
-        background-position: center;
-        background-size: 300px;
+        position: relative;
+        background: transparent;
         color: #000;
         font-size: 24px;
         border: none;
         margin-bottom: 20px;
     }
 
-    .pic-button:hover {
-        opacity: 30%;
-        & .button-title {
-            opacity: 130%;
-        }
-    }
-    
-    .button-title{
-        opacity: 0%;
+    .pic-button img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+        opacity: 100%;
         transition: opacity 1s;
     }
 
+    .pic-button:hover {
+        img {
+            opacity: 25%;
+        }
+        .button-title {
+            opacity: 100%;
+        }
+    }
+
+    .pic-button#misc img{
+        object-position: center;
+    }
     
-
-    .pic-button#concepts {
-        background-image: url("img/design/Design Sketch - Merlot Set.jpg");
-        background-position: top;
+    .button-title {
+        position: absolute;
+        top: 0;
+        margin: 25%;
+        opacity: 0%;
+        transition: opacity 1s;
+        z-index: 499;
+        color: #fff;
     }
-
-    .pic-button#technical {
-        background-image: url("img/technical/WIP - Bodice Block.png");
-    }
-
-    .pic-button#construction {
-        background-image: url("img/construction/Assignment - Striped Dress.jpg");
-    }
-
-    .pic-button#misc {
-        background-image: url("img/misc/Icon - SYMCOS.png");
-    }
-
 
 </style>
 
@@ -95,19 +91,31 @@
     <div class="wrapper">
 
     <div class="infobox">
-        <button type="submit" class="pic-button" id="concepts"><div class="button-title">Design Concepts</div></button>
+        <button type="submit" class="pic-button" id="concepts">
+            <img src="img/design/Design Sketch - Merlot Set.jpg" alt="Design Concepts">
+            <div class="button-title">Design Concepts</div>
+        </button>
     </div>
 
     <div class="infobox">
-        <button type="submit" class="pic-button" id="technical"><div class="button-title">Technical Design</div></button>
+        <button type="submit" class="pic-button" id="technical">
+            <img src="img/technical/WIP - Bodice Block.png" alt="Technical Design">
+            <div class="button-title">Technical Design</div>
+        </button>
     </div>
 
     <div class="infobox">
-        <button type="submit" class="pic-button" id="construction"><div class="button-title">Garment Construction</div></button>
+        <button type="submit" class="pic-button" id="construction">
+            <img src="img/construction/Assignment - Striped Dress.jpg" alt="Garment Construction">
+            <div class="button-title">Garment Construction</div>
+        </button>
     </div>
 
     <div class="infobox">
-        <button type="submit" class="pic-button" id="misc"><div class="button-title">Miscellaneous Work</div></button>
+        <button type="submit" class="pic-button" id="misc">
+            <img src="img/misc/Icon - SYMCOS.png" alt="Miscellaneous Work">
+            <div class="button-title">Miscellaneous Work</div>
+        </button>
     </div>
     
     </div>
