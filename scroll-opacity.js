@@ -1,5 +1,5 @@
 window.addEventListener('scroll', function () {
-    let mySection = document.getElementById("body");
+    let mySection = document.getElementById("scroll-dn");
     const myOpacity = this.scrollY / 1000;
 
     if (myOpacity  === 0) {
