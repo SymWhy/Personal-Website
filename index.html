@@ -16,7 +16,6 @@
     }
 
     #header {
-        background-color: #1c0336;
         position: sticky;
         top: 0;
         text-align: center;
@@ -30,13 +29,16 @@
     }
 
     .wrapper {
+        background-color: #1c0336;
+        margin: 10px auto;
+        padding: 25px;
         position: relative;
-        width: inherit;
+        width: fit-content;
         display: grid;
-        grid-template-columns: 20% 20%;
+        grid-template-columns: 50% 50%;
         gap: 2%;
         text-align: center;
-        justify-content: center;
+        justify-content:unsafe;
     }  
 
     .pic-button {
