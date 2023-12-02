@@ -32,7 +32,7 @@
 
     #header {
         background-color: #1c0336;
-        display: inline-flexbox;
+        display: inline-block;
         position: sticky;
         top: 0;
         text-align: center;
@@ -45,19 +45,30 @@
         z-index: 999;
     }
 
+    #title {
+        margin-bottom: 25px;
+    }
+
     .socials {
         display: inline-flex;
         list-style-type: none;
+        margin: unset;
     }
 
     .social-btn {
-        display: block;
+        display: inline-block;
+        text-align: center;
         background-color: #fff;
         border-radius: 3px;
         width: 32px;
         height: 40px;
-        margin: 5px;
+        margin-bottom: 15px;
+        margin-right: 5px;
         padding: 0px 5px;
+    }
+
+    .social-btn:hover {
+        color: #3688FF;
     }
 
     .social-btn:active {
@@ -123,8 +134,7 @@
 <body>
 
     <div id="header">
-        <div id="name">Sym Whysel</div>
-        <br>
+        <div id="title">Sym Whysel</div>
         <ul class="socials">
             <li>
             <a class="social-btn" href="https://www.facebook.com/profile.php?id=100090669742098" target="_blank" rel="noopener noreferrer">
