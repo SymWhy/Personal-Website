@@ -42,10 +42,15 @@
         border-radius: 15px;
     }
 
+    .favicon-button {
+        background-color: transparent;
+        display: inline-block;
+    }
+
     #favicon img {
         margin: 0 auto;
         max-width: 100px;
-        display: block;
+        max-height: 100px;
         border-radius: 10px;
         box-shadow: 0px 5px 5px #00000099;
     }
@@ -54,7 +59,6 @@
         display: inline-flex;
         width: fit-content;
         text-align: center;
-        margin-top: 20px;
     }
 
     .socials {
@@ -164,7 +168,10 @@
 <body>
 
     <div id="header">
-        <div id="favicon"><img src="img/favicon.jpg" alt="Sym Whysel"></div>
+        <button type="submit" class="pic-button" id="Home" href="/">
+            <div id="favicon"><img src="img/favicon.jpg" alt="Home"></div>
+        </button>
+        <br>
         <div id="title">Sym Whysel</div>
         <br>
         <div class="socials">
