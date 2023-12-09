@@ -42,12 +42,14 @@
         border-radius: 15px;
     }
 
-    .favicon-button {
+    .favicon-btn {
         background-color: transparent;
         display: inline-block;
+        border: none;
+        cursor: pointer;
     }
 
-    #favicon img {
+    .favicon-btn img {
         margin: 0 auto;
         max-width: 100px;
         max-height: 100px;
@@ -168,9 +170,9 @@
 <body>
 
     <div id="header">
-        <button type="submit" class="pic-button" id="Home" href="/">
-            <div id="favicon"><img src="img/favicon.jpg" alt="Home"></div>
-        </button>
+        <a class="favicon-btn" href="/" rel="noopener noreferrer">
+            <img src="img/favicon.jpg" alt="Home">
+        </a>
         <br>
         <div id="title">Sym Whysel</div>
         <br>
