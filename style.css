@@ -11,9 +11,6 @@ body {
 }
 
 i {
-    color: #1c0336;
-    text-decoration: none;
-    transition: color 0.3s;
 }
 
 #header {
@@ -21,7 +18,6 @@ i {
     position: sticky;
     top: 0;
     left: 0;
-    text-align: right;
     margin: 0 0;
     padding: 0 0;
     width: 100%;
@@ -45,19 +41,21 @@ i {
     box-shadow: 0px 5px 5px #00000099;
 }
 
-#title {
-    display: inline-flex;
-    width: fit-content;
-    text-align: center;
-    font-size: 36px;
-    margin-top: 10px;
-    margin-right: 25px;
+.hamburger {
+    color: #000;
+    display: inline;
+    position: absolute;
+    text-align: left;
+    font-size: 48px;
+    margin: 20px;
+    margin-right: 84%;
 }
 
-#description {
-    margin-top: 10px;
-    font-size: 16px;
+#title {
+    display: inline;
+    font-size: 72px;
     margin-right: 25px;
+    margin-left: 89%;
 }
 
 .socials {
@@ -87,10 +85,6 @@ i {
     i {
     color: #3688FF;
     }
-}
-
-.hamburger {
-    color: #999;
 }
 
 #scroll-dn {
