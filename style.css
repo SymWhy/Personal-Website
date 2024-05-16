@@ -1,6 +1,5 @@
 body {
-    background-color: #fff;
-    background-image: url("img/bg-big.jpg");
+    background-color: #ffe4ff;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +40,7 @@ i {
     box-shadow: 0px 5px 5px #00000099;
 }
 
-.hamburger {
+.dropdown {
     color: #000;
     display: inline;
     position: absolute;
@@ -51,7 +50,26 @@ i {
     margin-right: 84%;
 }
 
-#title {
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(38, 38, 38);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+#header .title {
     display: inline;
     font-size: 72px;
     margin-right: 25px;
@@ -86,6 +104,19 @@ i {
     color: #3688FF;
     }
 }
+
+.floaty {
+    width: 750px;
+    margin: 10% auto;
+    background-color: #fff;
+}
+
+.floaty .title {
+    font-size: 48px;
+}
+
+
+
 
 #scroll-dn {
     position: fixed;
