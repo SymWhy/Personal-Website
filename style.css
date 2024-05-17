@@ -127,11 +127,8 @@ i {
   
 .filter-div {
     float: left;
-    background-color: #2196F3;
     color: #ffffff;
-    width: 300px;
-    height: 300px;
-    line-height: 100px;
+    size: fit-content;
     text-align: center;
     margin: 2px;
     display: none; /* Hidden by default */
@@ -171,9 +168,6 @@ i {
 .floaty .title {
     font-size: 48px;
 }
-
-
-
 
 #scroll-dn {
     position: fixed;
