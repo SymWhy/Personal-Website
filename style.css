@@ -111,27 +111,28 @@ i {
 
 #filter-btn-container {
     position: fixed;
-    display: inline-flex;
     width: fit-content;
     left: 15px;
     display: grid;
 }
 
 #filter-div-container {
-    position: relative;
-    width: 66%;
     margin: auto auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    width: 66%;
 }
   
 .filter-div {
     float: left;
     color: #ffffff;
-    size: fit-content;
     text-align: center;
     margin: 2px;
     display: none; /* Hidden by default */
+}
+
+.filter-div img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
   
   /* The "show" class is added to the filtered elements */
@@ -160,9 +161,11 @@ i {
   }
 
 .floaty {
-    width: 750px;
-    margin: 10% auto;
-    background-color: #fff;
+    margin: auto auto;
+    width: 60%;
+    z-index: 99;
+    position: fixed;
+    background-color: #ffffff;
 }
 
 .floaty .title {
