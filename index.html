@@ -44,8 +44,25 @@
                 <i class="fa-brands fa-github"></i></a>
         </div> -->
     </div>
+    <div id="main-container">
+    <!-- Control buttons -->
+    <div id="sort-btn-container">
+        <button id="sort-btn-asc" class="fa-solid fa-arrow-up" onclick="sortListAsc()"></button>
+        <button id="sort-btn-dsc" class="fa-solid fa-arrow-down" onclick="sortListDsc()"></button>
+    </div>
 
-    <div class="filter-div-container">
+    <div id="filter-btn-container">
+        <button class="filter-btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="filter-btn" onclick="filterSelection('fashion')"> Fashion Design</button>
+        <button class="filter-btn" onclick="filterSelection('upcycling')"> Upcycling</button>
+        <button class="filter-btn" onclick="filterSelection('cosplay')"> Cosplay</button>
+        <button class="filter-btn" onclick="filterSelection('3D')"> 3D Art</button>
+        <button class="filter-btn" onclick="filterSelection('texturing')"> Texturing</button>
+        <button class="filter-btn" onclick="filterSelection('video')"> Video</button>
+    </div>
+
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div id="filter-div-container">
         <div class="filter-div 3D modding" updated="20240513">Dwemer Lantern</div>
         <div class="filter-div 3D" updated="20240330">Face Retopology</div>
         <div class="filter-div 3D texturing" updated="20240325">Rebecca Cyberpunk</div>
@@ -57,11 +74,11 @@
         <div class="filter-div fashion" updated="20220128">Striped Doll Dress</div>
         <div class="filter-div cosplay upcycling" updated="20211031">Lady Dimitrescu</div>
         <div class="filter-div fashion" updated="20211023">Salem Harness</div>
-
     </div>
+</div>
 </body>
 
-<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
-<script src="/wrapper.js"></script>
+<script src="/filter.js"></script>
+<script src="/sort.js"></script>
 
 </html> 
