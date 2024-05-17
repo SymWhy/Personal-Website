@@ -109,13 +109,19 @@ i {
     width: 100%;
 }
 
-#sort-btn-container {
+#buttons-container {
     position: fixed;
-    right: 15px;
+    display: inline-flex;
+    width: fit-content;
+}
+
+#sort-btn-container {
+    position: relative;
+    margin-left: 40px;
 }
 
 #filter-btn-container {
-    position: fixed;
+    position: relative;
     left: 15px;
     display: grid;
 }
