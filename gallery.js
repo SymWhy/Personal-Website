@@ -11,10 +11,9 @@ function myFunction(element) {
 }
 
 // Add active class to the current thumbnail button (highlight it)
-function updateThumbs(myModalClass, element) {
+function updateThumbs(element) {
     //get the active thumbnail
-    var myModal = document.getElementById(myModalClass);
-    var current = myModal.getElementsByClassName("active");
+    var current = modal.getElementsByClassName("active");
     //remove the "active" class from the previously active thumbnail
     current[0].className = current[0].className.replace(" active", "");
     //add the "active" class to this clicked thumbnail
@@ -26,22 +25,25 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
-
-  //nullify globals
-  modal = null;
-  imgArray = null;
-  thumbArray = null;
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+    updateThumbs(thumbArray[0]);
     modal.style.display = "none";
 
     //nullify globals
     modal = null;
     imgArray = null;
+    thumbArray = null;
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    updateThumbs(thumbArray[0]);
+    modal.style.display = "none";
+
+    //nullify globals
+    modal = null;
+    imgArray = null;
+    thumbArray = null;
   }
 } 
 
