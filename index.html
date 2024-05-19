@@ -53,6 +53,7 @@
         <button class="filter-btn" onclick="filterSelection('cosplay')"> Cosplay</button>
         <button class="filter-btn" onclick="filterSelection('3D')"> 3D Art</button>
         <button class="filter-btn" onclick="filterSelection('texturing')"> Texturing</button>
+        <button class="filter-btn" onclick="filterSelection('modding')"> Modding</button>
         <button class="filter-btn" onclick="filterSelection('video')"> Video</button>
     </div>
 
@@ -62,10 +63,9 @@
         <div id="retopology" class="filter-div 3D" onclick="myFunction(this)" updated="20240330"><img src="\assets\images\3D - Erin Eridani.png" alt="Face and Retopology"></div>
         <div id="rebecca-cp" class="filter-div 3D texturing" updated="20240325"><img src="\assets\images\3D - Rebecca Cyberpunk.png" alt="Rebecca from Cyberpunk"></div>
         <div id="sunny-console" class="filter-div 3D" updated="20240212"><img src="\assets\images\3D - Sunny Console.png" alt="Evil AI Console/the ps5 speaking to you directly in your brain"></div>
-        <div id="alchemy-mask" class="filter-div 3D modding" updated="20240115"><img src="\assets\images\3D - Alchemy Mask.png" alt="Alchemy's Mask"></div>
+        <div id="alchemy-mask" class="filter-div 3D modding texturing" updated="20240115"><img src="\assets\images\3D - Alchemy Mask.png" alt="Alchemy's Mask"></div>
         <div id="mermaid-skirt" class="filter-div fashion upcycling" updated="20230302"><img src="\assets\images\Apparel - Mermaid Miniskirt.jpg" alt="Upcycled Mermaid Skirt"></div>
         <div id="aslal-addon" class="filter-div modding" updated="20220614"><img src="\assets\images\Modding - Alternate Start.png" alt="ASLAL Dwemer Addon"></div>
-        <div id="harley-quinn" class="filter-div cosplay upcycling" updated="20220314"><img src="\assets\images\Cosplay - Harley Quinn Top.jpg" alt="Harley Quinn Cosplay"></div>
         <div id="striped-doll-dress" class="filter-div fashion" updated="20220128"><img src="\assets\images\Apparel - Striped Dress.jpg" alt="Striped Doll Dress"></div>
         <div id="lady-d" class="filter-div cosplay upcycling" updated="20211031"><img src="\assets\images\Cosplay - Lady Dimitrescu.JPG" alt="Lady Dimitrescu from Resident Evil: Village"></div>
         <div id="star-harness" class="filter-div fashion" updated="20211023"><img src="\assets\images\Apparel - Star Harness.jpg" alt="Pentagram-shaped Elastic Harness"></div>
@@ -74,22 +74,39 @@
 <div id="modal-retopology" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" alt="close"><i class="fa-solid fa-xmark"></i></span>
         <div class="modal-img-container">
+
+            <button class="prev-img" alt="previous"><i class="fa-solid fa-chevron-left"></i></button>
+
             <img id="img-erin-sculpt" class="modal-img visible" src="\assets\images\3D - Erin Eridani.png"
                 alt="FFXIV Character Sculpt">
             <img id="img-erin-compare" class="modal-img" src="\assets\images\3D - Erin Retopology Compare.png"
                 alt="FFXIV Character Retopology Comparison">
 
-            <div class="modal-thumbs">
-                <button id="img-erin-sculpt-thumb" class="modal-img-thumb active" onclick="updateThumbs(this)"><img
-                        src="\assets\images\3D - Erin Eridani.png" alt="FFXIV Character Sculpt"></button>
-                <button id="img-erin-compare-thumb" class="modal-img-thumb" onclick="updateThumbs(this)"> <img
-                        src="\assets\images\3D - Erin Retopology Compare.png"
-                        alt="FFXIV Character Retopology Comparison"></button>
-            </div>
+            <button class="next-img" alt="next"><i class="fa-solid fa-chevron-right"></i></button>
+
+
         </div>
-        <p>Some text in the Modal..</p>
+        <div class="modal-thumbs">
+            <button id="img-erin-sculpt-thumb" class="modal-img-thumb active" onclick="updateThumbs(this)"><img
+                    src="\assets\images\3D - Erin Eridani.png" alt="FFXIV Character Sculpt"></button>
+            <button id="img-erin-compare-thumb" class="modal-img-thumb" onclick="updateThumbs(this)"> <img
+                    src="\assets\images\3D - Erin Retopology Compare.png"
+                    alt="FFXIV Character Retopology Comparison"></button>
+        </div>
+        <div class="modal-info">
+            <p>Made in Blender</p>
+
+            <p>Over a weekend I decided to teach myself retopology, rebuilding a 3D model with fewer polygons 
+                optimized for game design or animation. After practicing with existing models from video games and 
+            resource packs, I thought I'd try it with a sculpt of my own!</p>
+            <p>As you can see, the retopology has less detail than the original sculpt, but the original sculpt 
+                has literally millions of polygons. This makes it difficult for the machine to render quickly in 
+                a game or animation environment, so it is advisable to build a slightly simpler retopology for 
+                the engine to be able to render the model more easily.
+            </p>
+        </div>
     </div>
 </div>
 

@@ -193,8 +193,11 @@ button {
   /* Text */
 
   .modal-info {
+    background-color: #ddd;
     width: 600px;
-    margin: auto;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 5px;
   }
   
   /* The Close Button */
@@ -210,4 +213,28 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  } 
+
+  /* prev/next arrows */
+  .prev-img {
+    position: absolute;
+    display: block;
+    font-size: 36px;
+    color: #888;
+    left: 120px;
   }
+
+  .next-img {
+    position: absolute;
+    display: block;
+    font-size: 36px;
+    color: #888;
+    right: 120px;
+  }
+
+  .prev-img:hover,
+  .next-img:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
