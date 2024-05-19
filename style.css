@@ -144,25 +144,34 @@ button {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    max-width: 650px; 
-    height: fit-content;
+    max-width: 900px;
   }
 
   .modal-img-container {
-    min-width: 300px;
-    min-height: 300px;
-    max-width: 600px;
-    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
     margin: auto;
+    width: 610px;
+    height: 610px;
+    background-color: #c7c7c7;
+    border-radius: 3px;
   }
 
   .modal-img {
     display: none;
-    width: 100%;
-    margin: auto;
+    max-width: 600px;
+    max-height: 600px;
   }
 
   /* Thumbnails */
+  .modal-thumbs {
+    position: relative;
+    margin: auto;
+    max-width: 620px;
+  }
+
 
   .modal-img-thumb {
     display: inline;
@@ -180,12 +189,19 @@ button {
   .modal-img-thumb.active img {
     outline: #000 solid 3px;
   }
+
+  /* Text */
+
+  .modal-info {
+    width: 600px;
+    margin: auto;
+  }
   
   /* The Close Button */
   .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
   }
   
@@ -194,4 +210,4 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  } 
+  }
