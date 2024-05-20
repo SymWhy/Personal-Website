@@ -59,7 +59,7 @@
 
     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
     <div id="filter-div-container">
-        <div id="dwemer-lantern" class="filter-div 3D modding" updated="20240513"><img src="\assets\images\3D - Dwemer Lantern.png" alt="Dwemer Lantern"></div>
+        <div id="dwemer-lantern" class="filter-div 3D modding" onclick="openLightbox(this, event)" updated="20240513"><img src="\assets\images\3D - Dwemer Lantern.png" alt="Dwemer Lantern"></div>
         <div id="retopology" class="filter-div 3D" onclick="openLightbox(this, event)" updated="20240330"><img src="\assets\images\3D - Erin Eridani.png" alt="Face and Retopology"></div>
         <div id="rebecca-cp" class="filter-div 3D texturing" updated="20240325"><img src="\assets\images\3D - Rebecca Cyberpunk.png" alt="Rebecca from Cyberpunk"></div>
         <div id="sunny-console" class="filter-div 3D" updated="20240212"><img src="\assets\images\3D - Sunny Console.png" alt="Evil AI Console/the ps5 speaking to you directly in your brain"></div>
@@ -92,11 +92,27 @@
 
         <div id="modal-text"></div>
 
+        
+        <div id="modal-img-dwemer-lantern" class="hidden">
+            <img id="img-dwemer-lantern-furnishing" class="modal-img" src="\assets\images\3D - Dwemer Lantern.png">
+        </div>
+
+        <div id="modal-captions-dwemer-lantern" class="hidden">
+            <div id="caption-dwemer-lantern-furnishing" class="modal-caption">ESO Dwemer Lantern</div>
+        </div>
+
+        <div id="modal-text-dwemer-lantern" class="hidden">
+            <p>Made in Blender</p>
+
+            <p>Is it strange to have a favorite furnishing in an MMO? I always thought the Dwarven lanterns in 
+                ESO were cute and wanted an asset I could use in a TES: Skyrim mod, so I threw this together in a 
+                weekend.
+            </p>
+        </div>
+
         <div id="modal-img-retopology" class="hidden">
-            <img id="img-erin-sculpt" class="modal-img" src="\assets\images\3D - Erin Eridani.png"
-                alt="FFXIV Character Sculpt">
-            <img id="img-erin-compare" class="modal-img" src="\assets\images\3D - Erin Retopology Compare.png"
-                alt="FFXIV Character Retopology Comparison">
+            <img id="img-erin-sculpt" class="modal-img" src="\assets\images\3D - Erin Eridani.png">
+            <img id="img-erin-compare" class="modal-img" src="\assets\images\3D - Erin Retopology Compare.png">
         </div>
 
         <div id="modal-captions-retopology" class="hidden">
