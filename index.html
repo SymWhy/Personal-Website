@@ -61,14 +61,14 @@
     <div id="filter-div-container">
         <div id="dwemer-lantern" class="filter-div 3D modding" onclick="openLightbox(this, event)" updated="20240513"><img src="\assets\images\3D - Dwemer Lantern.png" alt="Dwemer Lantern"></div>
         <div id="retopology" class="filter-div 3D" onclick="openLightbox(this, event)" updated="20240330"><img src="\assets\images\3D - Erin Eridani.png" alt="Face and Retopology"></div>
-        <div id="rebecca-cp" class="filter-div 3D texturing" updated="20240325"><img src="\assets\images\3D - Rebecca Cyberpunk.png" alt="Rebecca from Cyberpunk"></div>
-        <div id="sunny-console" class="filter-div 3D" updated="20240212"><img src="\assets\images\3D - Sunny Console.png" alt="Evil AI Console/the ps5 speaking to you directly in your brain"></div>
-        <div id="alchemy-mask" class="filter-div 3D modding texturing" updated="20240115"><img src="\assets\images\3D - Alchemy Mask.png" alt="Alchemy's Mask"></div>
-        <div id="mermaid-skirt" class="filter-div fashion upcycling" updated="20230302"><img src="\assets\images\Apparel - Mermaid Miniskirt.jpg" alt="Upcycled Mermaid Skirt"></div>
-        <div id="aslal-addon" class="filter-div modding" updated="20220614"><img src="\assets\images\Modding - Alternate Start.png" alt="ASLAL Dwemer Addon"></div>
-        <div id="striped-doll-dress" class="filter-div fashion" updated="20220128"><img src="\assets\images\Apparel - Striped Dress.jpg" alt="Striped Doll Dress"></div>
-        <div id="lady-d" class="filter-div cosplay upcycling" updated="20211031"><img src="\assets\images\Cosplay - Lady Dimitrescu.JPG" alt="Lady Dimitrescu from Resident Evil: Village"></div>
-        <div id="star-harness" class="filter-div fashion" updated="20211023"><img src="\assets\images\Apparel - Star Harness.jpg" alt="Pentagram-shaped Elastic Harness"></div>
+        <div id="rebecca" class="filter-div 3D texturing" onclick="openLightbox(this, event)" updated="20240325"><img src="\assets\images\3D - Rebecca Cyberpunk.png" alt="Rebecca from Cyberpunk"></div>
+        <div id="sunny" class="filter-div 3D" onclick="openLightbox(this, event)" updated="20240212"><img src="\assets\images\3D - Sunny Console.png" alt="Evil AI Console/the ps5 speaking to you directly in your brain"></div>
+        <div id="alchemy" class="filter-div 3D modding texturing" onclick="openLightbox(this, event)" updated="20240115"><img src="\assets\images\3D - Alchemy Mask.png" alt="Alchemy's Mask"></div>
+        <div id="mermaid-skirt" class="filter-div fashion upcycling" onclick="openLightbox(this, event)" updated="20230302"><img src="\assets\images\Apparel - Mermaid Miniskirt.jpg" alt="Upcycled Mermaid Skirt"></div>
+        <div id="aslal" class="filter-div modding" onclick="openLightbox(this, event)" updated="20220614"><img src="\assets\images\Modding - Alternate Start.png" alt="ASLAL Dwemer Addon"></div>
+        <div id="striped-dress" class="filter-div fashion" onclick="openLightbox(this, event)" updated="20220128"><img src="\assets\images\Apparel - Striped Dress.jpg" alt="Striped Doll Dress"></div>
+        <div id="lady-d" class="filter-div cosplay upcycling" onclick="openLightbox(this, event)" updated="20211031"><img src="\assets\images\Cosplay - Lady Dimitrescu.JPG" alt="Lady Dimitrescu from Resident Evil: Village"></div>
+        <div id="star-harness" class="filter-div fashion" onclick="openLightbox(this, event)" updated="20211023"><img src="\assets\images\Apparel - Star Harness.jpg" alt="Pentagram-shaped Elastic Harness"></div>
     </div>
 </div>
 <div id="modal">
@@ -93,6 +93,7 @@
         <div id="modal-text"></div>
 
         
+
         <div id="modal-img-dwemer-lantern" class="hidden">
             <img id="img-dwemer-lantern-furnishing" class="modal-img" src="\assets\images\3D - Dwemer Lantern.png">
         </div>
@@ -105,10 +106,12 @@
             <p>Made in Blender</p>
 
             <p>Is it strange to have a favorite furnishing in an MMO? I always thought the Dwarven lanterns in 
-                ESO were cute and wanted an asset I could use in a TES: Skyrim mod, so I threw this together in a 
+                ESO were cute and wanted an asset I could use in a TES V: Skyrim mod, so I threw this together in a 
                 weekend.
             </p>
         </div>
+
+        
 
         <div id="modal-img-retopology" class="hidden">
             <img id="img-erin-sculpt" class="modal-img" src="\assets\images\3D - Erin Eridani.png">
@@ -134,6 +137,184 @@
                 the engine to be able to render the model more easily.
             </p>
         </div>
+
+
+
+        <div id="modal-img-rebecca" class="hidden">
+            <img id="img-rebecca-face" class="modal-img" src="\assets\images\3D - Rebecca Cyberpunk.png">
+            <img id="img-rebecca-clips" class="modal-img" src="\assets\images\3D - Rebecca Cyberpunk Hairclip.png">
+        </div>
+
+        <div id="modal-captions-rebecca" class="hidden">
+            <div id="caption-rebecca-face" class="modal-caption">Rebecca from Cyberpunk: Edgerunners</div>
+            <div id="caption-rebecca-clips" class="modal-caption"><a href="https://sketchfab.com/3d-models/cyberpunk-edgerunners-rebecca-hairclip-f745d7eedd5141a2a49bdd8cea79e94f" target="_blank" rel="noopener noreferrer">Rebecca's hairclips</a></div>
+        </div>
+
+        <div id="modal-text-rebecca" class="hidden">
+            <p>Made in Daz Studio, Blender, Adobe Photoshop</p>
+
+            <p>I've been practicing texturing for character design, developing a kind of painterly style. I prefer 
+                more cartoonish styles to realism, taking inspiration from shows like Arcane.
+            </p>
+            <p>My process for texturing takes place mostly in Blender, which has fairly decent texturing tools. If 
+                I need a texture to be more precise, like with the eyes, I'll mark the location on the UV map in 
+                Blender and bring it into Photoshop.
+            </p>
+            <p>The hair, hairclips, and textures are all original.</p>
+        </div>
+
+
+
+        <div id="modal-img-sunny" class="hidden">
+            <img id="img-sunny-console" class="modal-img" src="\assets\images\3D - Sunny Console.png">
+        </div>
+
+        <div id="modal-captions-sunny" class="hidden">
+            <div id="caption-sunny-console" class="modal-caption"><a href="https://sketchfab.com/3d-models/sunnys-console-3d921b9cd0604e8a9ada9f9715d5de58"  target="_blank" rel="noopener noreferrer">Console for an AI</a></div>
+        </div>
+
+        <div id="modal-text-sunny" class="hidden">
+            <p>Made in Blender</p>
+
+            <p>Everyone has an opinion on AI nowadays. Developers are trying very hard to replicate organic 
+                neural networks in code. In the story I'm working on, these developers have access to quantum 
+                computers and donor brain cells. I needed a "character" design that properly conveyed the horror 
+                of a computer that effectively runs on human flesh. I opted for a "Hal 9000 meets XBox" kind of 
+                design, a commercial console designed for user appeal but still dangerous looking. I also took 
+                inspiration from older car radios, because the aesthetic I'm going for is very neo-eighties.
+            </p>
+        </div>
+        
+        
+        
+        <div id="modal-img-alchemy" class="hidden">
+            <img id="img-alchemy-mask" class="modal-img" src="\assets\images\3D - Alchemy Mask.png">
+        </div>
+
+        <div id="modal-captions-alchemy" class="hidden">
+            <div id="caption-alchemy-mask" class="modal-caption">ESO Alchemy's Mask</div>
+        </div>
+
+        <div id="modal-text-alchemy" class="hidden">
+            <p>Made in Blender, Adobe Photoshop</p>
+
+            <p>Alchemy is one of my favorite characters in ESO. She's a High Elf, a clown, and she's transgender. 
+                Her story is sad, she ran away from home because she was being forced into an identity and 
+                occupation that wasn't right for her. This story resonated with the LGBTQ community, and in 2019, 
+                ESO: Summerset won a GLAAD award for Outstanding Video Game.
+            </p>
+            <p>I like the character and I like her design, so I remade her mask for use in TES V: Skyrim.</p>
+        </div>
+
+        
+
+        <div id="modal-img-mermaid-skirt" class="hidden">
+            <img id="img-mermaid-skirt" class="modal-img" src="\assets\images\Apparel - Mermaid Miniskirt.jpg">
+        </div>
+
+        <div id="modal-captions-mermaid-skirt" class="hidden">
+            <div id="caption-mermaid-skirt" class="modal-caption">Upcycled Mermaid Skirt</div>
+        </div>
+
+        <div id="modal-text-mermaid-skirt" class="hidden">
+            <p>A while back, at a sidewalk fair outside my apartment, I got half a yard of this fun fabric from 
+                someone selling scrap fabric. I had no idea what to do with it, so it sat in my scrap fabric bag 
+                for a few years. Then, in 2023, I randomly got the idea to turn it into a cute skirt. I was 
+                concerned I wouldn't have enough fabric, but I still managed to make the skirt suitably swishy. 
+                When sewing, I generally try to use as much of the fabric I have as I can, minimizing waste. 
+                Sustainability is important to me as a seamstress and designer, and my work reflects that.
+            </p>
+        </div>
+        
+        
+
+        <div id="modal-img-aslal" class="hidden">
+            <img id="img-aslal-last-dwemer" class="modal-img" src="\assets\images\Modding - Alternate Start.png">
+        </div>
+
+        <div id="modal-captions-aslal" class="hidden">
+            <div id="caption-aslal-last-dwemer" class="modal-caption"><a href="https://www.nexusmods.com/skyrimspecialedition/mods/69666" target="_blank" rel="noopener noreferrer">Alternate Start - The Last Dwemer</a></div>
+        </div>
+
+        <div id="modal-text-aslal" class="hidden">
+            <p>Made in Nifskope, Creation Kit</p>
+
+            <p>This is the first big mod I've released on the Nexus. Before then, most of my mods had been 
+                small tweaks and patches for myself. But this one was different, I polished it and put it up 
+                online and got tons of downloads overnight. Since then, I've gained over 400 endorsements and 
+                over 20k unique downloads.
+            </p>
+            <p>
+                The mod's scenario is simple, the player is a time-traveler that has been underground for a few 
+                thousand years. I placed a small room inside a building deep underground in Blackreach with 
+                enough starter gear to get the player to the surface. A big draw for the Elder Scrolls is its 
+                use of magitech to add sci-fi elements to the medieval fantasy setting, and I'm a big fan of 
+                that!
+            </p>
+        </div>
+
+        
+
+        <div id="modal-img-striped-dress" class="hidden">
+            <img id="img-striped-dress-final" class="modal-img" src="\assets\images\Apparel - Striped Dress.jpg">
+            <img id="img-striped-dress-sketch" class="modal-img" src="\assets\images\Apparel - Striped Dress Sketch.jpg">
+        </div>
+
+        <div id="modal-captions-striped-dress" class="hidden">
+            <div id="caption-striped-dress-final" class="modal-caption">Striped doll dress</div>
+            <div id="caption-striped-dress-sketch" class="modal-caption">Sketch of the dress</div>
+        </div>
+
+        <div id="modal-text-striped-dress" class="hidden">
+            <p>This was a project for my Costume Design I course at Sarah Lawrence. The task was to create a 
+                dress for our drawing mannequins from this black and white pinstriped fabric. This is mostly hand-
+                sewn. I took some inspiration from Roxy Lalonde's purple dress in Homestuck, as well as the 1950s 
+                dress silhouette. I'm really happy with the final result!
+            </p>
+        </div>
+
+        
+
+        <div id="modal-img-lady-d" class="hidden">
+            <img id="img-lady-d-dress" class="modal-img" src="\assets\images\Cosplay - Lady Dimitrescu.JPG">
+        </div>
+
+        <div id="modal-captions-lady-d" class="hidden">
+            <div id="caption-lady-d-dress" class="modal-caption">Lady Dimitrescu - Resident Evil: Village</div>
+        </div>
+
+        <div id="modal-text-lady-d" class="hidden">
+            <p>Around 2021-2022, one of the antagonists of Resident Evil: Village soared in popularity among 
+                queer fans on then-Twitter. Lady Dimitrescu gained a sort of cult following, a fandom of her 
+                own. I was one of those fans, so naturally I decided to cosplay her (despite being only 5'3").
+            </p>
+            <p>The dress is a t-shirt dress I got second-hand, and altered by hand on the floor of my dorm room 
+                at Sarah Lawrence. Most of my cosplays are second-hand garments that have been altered to look 
+                like what the character wears. For the sake of sustainability, I get much of my clothes and 
+                fabric second-hand to reduce waste, and try to be mindful of where I source my materials from.
+            </p>
+        </div>
+
+        
+
+        <div id="modal-img-star-harness" class="hidden">
+            <img id="img-star-harness" class="modal-img" src="\assets\images\Apparel - Star Harness.jpg">
+        </div>
+
+        <div id="modal-captions-star-harness" class="hidden">
+            <div id="caption-star-harness" class="modal-caption"><a href="https://www.etsy.com/listing/1507775195/elastic-pentagram-salem-harness" target="_blank" rel="noopener noreferrer">Pentagram-shaped elastic harness</a></div>
+        </div>
+
+        <div id="modal-text-star-harness" class="hidden">
+            <p>In 2021, I gave my old Etsy a revamp, and this was one of the first items I posted. Pentagram 
+                harnesses were very popular at that time, so I decided to design one for my shop. It's made of 
+                quality lingerie elastic and very stretchy. In order to accommodate more sizes, my products are 
+                mostly made-to-order. Inclusive sizing is very important to me as someone who's struggled to 
+                find a bra that fits for most of their life, so I'm making sure that nobody has that issue with 
+                my products. Everyone deserves to have cute clothes, I believe this strongly.
+            </p>
+        </div>
+
     </div>
 </div>
 
