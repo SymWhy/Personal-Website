@@ -77,13 +77,20 @@
         <span class="close" alt="close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></span>
         <div class="modal-img-container">
 
-            <button class="prev-img" alt="previous" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="next-img" alt="next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
-            
             <img id="modal-img" src="">
 
+            <div class="nav-arrows">
+                <button class="prev-img" alt="previous" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="next-img" alt="next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
         </div>
+        
+        <div id="modal-caption"></div>
+
         <div id="modal-thumbs"></div>
+
+        <div id="modal-text"></div>
 
         <div id="modal-img-retopology" class="hidden">
             <img id="img-erin-sculpt" class="modal-img" src="\assets\images\3D - Erin Eridani.png"
@@ -92,7 +99,12 @@
                 alt="FFXIV Character Retopology Comparison">
         </div>
 
-        <div id="modal-info-retopology" class="hidden">
+        <div id="modal-captions-retopology" class="hidden">
+            <div id="caption-erin-sculpt" class="modal-caption">Sculpt of an OC</div>
+            <div id="caption-erin-compare" class="modal-caption">Comparison of sculpt and retopology</div>
+        </div>
+
+        <div id="modal-text-retopology" class="hidden">
             <p>Made in Blender</p>
 
             <p>Over a weekend I decided to teach myself retopology, rebuilding a 3D model with fewer polygons 

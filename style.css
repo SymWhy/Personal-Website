@@ -149,6 +149,7 @@ button {
     padding: 20px;
     border: 1px solid #888;
     max-width: 900px;
+    position: relative;
   }
 
   .modal-img-container {
@@ -183,16 +184,25 @@ button {
     margin-right: 5px;
   }
 
-  #modal-img-thumb.active img {
+  .active-thumbnail {
     outline: #000 solid 3px;
   }
 
   /* Text */
 
-  .modal-info {
+  #modal-caption {
+    display: block;
+    width: 610px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #modal-text {
     background-color: #ddd;
     width: 600px;
-    margin: 50px auto;
+    margin: 25px auto;
     padding: 15px;
     border-radius: 5px;
   }
@@ -212,22 +222,26 @@ button {
     cursor: pointer;
   } 
 
-  /* prev/next arrows */
-  .prev-img {
+  .nav-arrows {
     position: absolute;
-    display: block;
+    margin: auto;
+    width: 800px;
+    top: 30%;
+  }
+
+  /* prev/next arrows */
+  .prev-img, .next-img {
+    position: relative;
+    display: inline;
     font-size: 36px;
     color: #888;
-    left: 120px;
+    right: 0;
   }
 
   .next-img {
-    position: absolute;
-    display: block;
-    font-size: 36px;
-    color: #888;
-    right: 120px;
+    right: -95%;
   }
+
 
   .prev-img:hover,
   .next-img:hover {
