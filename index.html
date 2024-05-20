@@ -60,7 +60,7 @@
     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
     <div id="filter-div-container">
         <div id="dwemer-lantern" class="filter-div 3D modding" updated="20240513"><img src="\assets\images\3D - Dwemer Lantern.png" alt="Dwemer Lantern"></div>
-        <div id="retopology" class="filter-div 3D" onclick="myFunction(this)" updated="20240330"><img src="\assets\images\3D - Erin Eridani.png" alt="Face and Retopology"></div>
+        <div id="retopology" class="filter-div 3D" onclick="openLightbox(this, event)" updated="20240330"><img src="\assets\images\3D - Erin Eridani.png" alt="Face and Retopology"></div>
         <div id="rebecca-cp" class="filter-div 3D texturing" updated="20240325"><img src="\assets\images\3D - Rebecca Cyberpunk.png" alt="Rebecca from Cyberpunk"></div>
         <div id="sunny-console" class="filter-div 3D" updated="20240212"><img src="\assets\images\3D - Sunny Console.png" alt="Evil AI Console/the ps5 speaking to you directly in your brain"></div>
         <div id="alchemy-mask" class="filter-div 3D modding texturing" updated="20240115"><img src="\assets\images\3D - Alchemy Mask.png" alt="Alchemy's Mask"></div>
@@ -71,31 +71,28 @@
         <div id="star-harness" class="filter-div fashion" updated="20211023"><img src="\assets\images\Apparel - Star Harness.jpg" alt="Pentagram-shaped Elastic Harness"></div>
     </div>
 </div>
-<div id="modal-retopology" class="modal">
+<div id="modal">
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close" alt="close"><i class="fa-solid fa-xmark"></i></span>
+        <span class="close" alt="close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></span>
         <div class="modal-img-container">
 
-            <button class="prev-img" alt="previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="prev-img" alt="previous" onclick="changeImage(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-img" alt="next" onclick="changeImage(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            
+            <img id="modal-img" src="">
 
-            <img id="img-erin-sculpt" class="modal-img visible" src="\assets\images\3D - Erin Eridani.png"
+        </div>
+        <div id="modal-thumbs"></div>
+
+        <div id="modal-img-retopology" class="hidden">
+            <img id="img-erin-sculpt" class="modal-img" src="\assets\images\3D - Erin Eridani.png"
                 alt="FFXIV Character Sculpt">
             <img id="img-erin-compare" class="modal-img" src="\assets\images\3D - Erin Retopology Compare.png"
                 alt="FFXIV Character Retopology Comparison">
-
-            <button class="next-img" alt="next"><i class="fa-solid fa-chevron-right"></i></button>
-
-
         </div>
-        <div class="modal-thumbs">
-            <button id="img-erin-sculpt-thumb" class="modal-img-thumb active" onclick="updateThumbs(this)"><img
-                    src="\assets\images\3D - Erin Eridani.png" alt="FFXIV Character Sculpt"></button>
-            <button id="img-erin-compare-thumb" class="modal-img-thumb" onclick="updateThumbs(this)"> <img
-                    src="\assets\images\3D - Erin Retopology Compare.png"
-                    alt="FFXIV Character Retopology Comparison"></button>
-        </div>
-        <div class="modal-info">
+
+        <div id="modal-info-retopology" class="hidden">
             <p>Made in Blender</p>
 
             <p>Over a weekend I decided to teach myself retopology, rebuilding a 3D model with fewer polygons 

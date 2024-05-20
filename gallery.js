@@ -1,66 +1,69 @@
-var modal = null;
-var imgArray = null;
-var thumbArray = null;
+var currentIndex = 0;
+var images = null;
+var totalImages = null;
 
-function myFunction(element) {
-    modal = document.getElementById("modal-" + element.id);
-    imgArray = modal.getElementsByClassName("modal-img");
-    thumbArray = modal.getElementsByClassName("modal-img-thumb");
-    modal.style.display = "block";
-    imgArray[0].style.display = "block";
+
+// Open the lightbox
+function openLightbox(element, event) {
+  imagesContainer = document.getElementById('modal-img-' + element.id);
+  console.log(imagesContainer);
+  images = imagesContainer.querySelectorAll("IMG");
+  // images = document.querySelectorAll('.modal-img-' + element.id).getElementsByType("IMG");
+  console.log(images);
+  totalImages = images.length;
+
+  currentIndex = 0;
+
+  updateLightboxImage();
+
+  document.getElementById("modal").style.display = "block";
 }
 
-// Add active class to the current thumbnail button (highlight it)
-function updateThumbs(element) {
-    //get the active thumbnail
-    var current = modal.getElementsByClassName("modal-thumbs")[0].getElementsByClassName("active");
-    //remove the "active" class from the previously active thumbnail
-    current[0].className = current[0].className.replace(" active", "");
-    //add the "active" class to this clicked thumbnail
-    element.className += " active";
-
-    var myImg = document.getElementById(element.id.replace("-thumb", ""));
-
-    updateImage(myImg);
-    
+// Close the lightbox
+function closeLightbox() {
+  document.getElementById('modal').style.display = 'none';
 }
 
-function updateImage(element) {
-    //get the active image
-    var currentImg = modal.getElementsByClassName("modal-img-container")[0].getElementsByClassName("visible")[0];
-    //hide the previously active image
-    currentImg.className = currentImg.className.replace(" visible", "");
-    currentImg.style.display = "none";
-    //add the "visible" class to the new active image
-    element.className += " visible";
-    element.style.display = "block";
-}
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    updateThumbs(thumbArray[0]);
-    modal.style.display = "none";
-
-    //nullify globals
-    modal = null;
-    imgArray = null;
-    thumbArray = null;
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    updateThumbs(thumbArray[0]);
-    modal.style.display = "none";
-
-    //nullify globals
-    modal = null;
-    imgArray = null;
-    thumbArray = null;
+// Change the lightbox image based on direction (1 for next, -1 for prev)
+function changeImage(direction) {
+  currentIndex += direction;
+  if (currentIndex >= totalImages) {
+    currentIndex = 0;
+  } else if (currentIndex < 0) {
+    currentIndex = totalImages - 1;
   }
-} 
+  updateLightboxImage();
+}
 
+// Update the lightbox image and thumbnails
+function updateLightboxImage() {
+  const lightboxImg = document.getElementById('modal-img');
+  const thumbnailContainer = document.getElementById('modal-thumbs');
+
+  // Update the main lightbox image
+  lightboxImg.src = images[currentIndex].src;
+
+  // Clear existing thumbnails
+  thumbnailContainer.innerHTML = '';
+
+  // Add new thumbnails
+  images.forEach((image, index) => {
+    console.log(image);
+    const thumbnail = document.createElement('img');
+    thumbnail.src = image.src;
+    thumbnail.alt = `Thumbnail ${index + 1}`;
+    thumbnail.classList.add('thumbnail');
+    thumbnail.addEventListener('click', () => updateMainImage(index));
+    thumbnailContainer.appendChild(thumbnail);
+  });
+
+  // Highlight the current thumbnail
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  thumbnails[currentIndex].classList.add('active-thumbnail');
+}
+
+// Update the main lightbox image when a thumbnail is clicked
+function updateMainImage(index) {
+  currentIndex = index;
+  updateLightboxImage();
+}
