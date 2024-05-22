@@ -1,6 +1,10 @@
 var e = document.getElementById("filter-div-container");
 
-window.addEventListener("resize", ( () =>  {
+respond()
+
+window.addEventListener("resize", respond());
+
+function respond() {
     if (window.innerWidth > 1200) {
         e.style.setProperty("grid-template-columns", "repeat(3, 1fr)");
     }
@@ -12,4 +16,4 @@ window.addEventListener("resize", ( () =>  {
     else {
         e.style.setProperty("grid-template-columns", "repeat(1, 1fr)");
     }
-}))
+}
