@@ -79,6 +79,7 @@ button {
 
 #title-moon {
   position: absolute;
+  display: block;
   right: 10px;
   top: 50px;
 }
