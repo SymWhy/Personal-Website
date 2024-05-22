@@ -89,13 +89,11 @@ button {
   display: block;
   right: 50px;
   width: 15%;
-}
-
-#about-container.mobile {
-  display: hidden;
+  min-width: 200px;
 }
 
 #about-container img {
+  width: 150px;
   display:block;
   position: relative;
   margin: 0 auto;
