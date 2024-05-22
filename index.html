@@ -21,14 +21,14 @@
 <body>
 
     <div id="header">
-        <div class="dropdown"><i class="fa-solid fa-bars"></i>
+        <!-- <div class="dropdown"><i class="fa-solid fa-bars"></i>
             <div class="dropdown-content">
                 <a href="/index.html">Home</a>
-                <!-- <a href="/about.html">About</a> -->
+                <a href="/about.html">About</a>
                 <a href="https://www.etsy.com/shop/symcos">Shop</a>
                 <a href="mailto:simone.whysel@gmail.com">Contact</a>
             </div>
-        </div>
+        </div> -->
         <div class="title">Sym Whysel</div>
         <div id="title-moon"><img src="assets/images/mini-moon.png"></div>
         <br>
@@ -60,6 +60,8 @@
         </div>
     </div>
 
+    <!-- Control buttons -->
+
     <ul id="filter-btn-container" class="cloud" role="menu" aria-label="Project tag cloud">
         <li><button class="filter-btn" onclick="filterSelection('fashion')" data-weight="3"> Fashion Design</button></li>
         <li><button class="filter-btn" onclick="filterSelection('upcycling')" data-weight="2"> Upcycling</button></li>
@@ -70,18 +72,6 @@
         <br>
         <li><button id="filter-show-all" class="filter-btn active" onclick="filterSelection('all')"> Show all</button></li>
     </ul>
-
-    <!-- Control buttons -->
-    <!-- <div id="filter-btn-container" >
-        <button class="filter-btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="filter-btn" onclick="filterSelection('fashion')"> Fashion Design</button>
-        <button class="filter-btn" onclick="filterSelection('upcycling')"> Upcycling</button>
-        <button class="filter-btn" onclick="filterSelection('cosplay')"> Cosplay</button>
-        <button class="filter-btn" onclick="filterSelection('3D')"> 3D Art</button>
-        <button class="filter-btn" onclick="filterSelection('texturing')"> Texturing</button>
-        <button class="filter-btn" onclick="filterSelection('modding')"> Modding</button>
-        <button class="filter-btn" onclick="filterSelection('video')"> Video</button>
-    </div> -->
 
     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
     <div id="filter-div-container">

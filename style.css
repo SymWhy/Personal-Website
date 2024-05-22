@@ -74,7 +74,7 @@ button {
     padding-right: 10px;
     font-family: 'Shardee';
     color: #fff;
-    -webkit-text-stroke: 1px #ccc;
+    -webkit-text-stroke: 1px #a17eb9;
 }
 
 #title-moon {
@@ -86,8 +86,13 @@ button {
 
 #about-container {
   position: fixed;
+  display: block;
   right: 50px;
   width: 15%;
+}
+
+#about-container.mobile {
+  display: hidden;
 }
 
 #about-container img {
@@ -170,7 +175,7 @@ ul.cloud button.active {
 #filter-div-container {
     margin: auto 20%;
     width: fit-content;
-    display: block; 
+    display: inline-block; 
     background-color: #ffedff;
     padding: 15px;
     display: grid;
