@@ -115,17 +115,62 @@ button {
 }
 
 #filter-btn-container {
-    position: fixed;
-    width: fit-content;
-    left: 15px;
-    display: grid;
-    background-color: #f7f3f7;
+  position: fixed;
+  width: fit-content;
+  left: 15px;
+  display: flex;
+  background-color: #f7f3f7;
+  width: 15%;
+}
+
+.cloud {
+  background-color: #f7f3f7;
+  z-index: 99;
+  position: absolute;
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.5rem;
+  border-radius: 5px;;
+}
+
+ul.cloud button[data-weight="1"] { --size: 1; }
+ul.cloud button[data-weight="2"] { --size: 2; }
+ul.cloud button[data-weight="3"] { --size: 3; }
+ul.cloud button[data-weight="4"] { --size: 4; }
+ul.cloud button[data-weight="5"] { --size: 5; }
+ul.cloud button[data-weight="6"] { --size: 6; }
+ul.cloud button[data-weight="7"] { --size: 7; }
+ul.cloud button[data-weight="8"] { --size: 8; }
+ul.cloud button[data-weight="9"] { --size: 9; }
+
+ul.cloud button {
+  all: unset;
+  color: #7043b9;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.125rem 0.25rem;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-size: calc(var(--size) * 0.25rem + 0.5rem);
+}
+
+ul.cloud button:hover {
+  color: #3f1d75;
+}
+
+ul.cloud button.active {
+  color: #cf45ad;
 }
 
 #filter-div-container {
     margin: auto 20%;
     width: fit-content;
-    display: inline-block; 
+    display: block; 
     background-color: #ffedff;
     padding: 15px;
     display: grid;
@@ -156,28 +201,6 @@ button {
   .show {
     display: block;
   }
-  
-  /* Style the buttons */
-  .filter-btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f7f3f7;
-    cursor: pointer;
-    z-index: -99;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .filter-btn:hover {
-    background-color: #eddef4;
-  }
-  
-  /* Add a dark background to the active button */
-  .filter-btn.active {
-    background-color: #432963;
-    color: white;
-  }
-
 
  /* The Modal (background) */
   #modal {

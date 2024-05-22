@@ -60,8 +60,19 @@
         </div>
     </div>
 
+    <ul id="filter-btn-container" class="cloud" role="menu" aria-label="Project tag cloud">
+        <li><button class="filter-btn" onclick="filterSelection('fashion')" data-weight="3"> Fashion Design</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('upcycling')" data-weight="2"> Upcycling</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('cosplay')" data-weight="1"> Cosplay</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('3D')" data-weight="5"> 3D Art</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('texturing')" data-weight="2"> Texturing</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('modding')" data-weight="3"> Modding</button></li>
+        <br>
+        <li><button id="filter-show-all" class="filter-btn active" onclick="filterSelection('all')"> Show all</button></li>
+    </ul>
+
     <!-- Control buttons -->
-    <div id="filter-btn-container" >
+    <!-- <div id="filter-btn-container" >
         <button class="filter-btn active" onclick="filterSelection('all')"> Show all</button>
         <button class="filter-btn" onclick="filterSelection('fashion')"> Fashion Design</button>
         <button class="filter-btn" onclick="filterSelection('upcycling')"> Upcycling</button>
@@ -70,7 +81,7 @@
         <button class="filter-btn" onclick="filterSelection('texturing')"> Texturing</button>
         <button class="filter-btn" onclick="filterSelection('modding')"> Modding</button>
         <button class="filter-btn" onclick="filterSelection('video')"> Video</button>
-    </div>
+    </div> -->
 
     <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
     <div id="filter-div-container">
