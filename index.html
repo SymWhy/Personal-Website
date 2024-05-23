@@ -49,24 +49,26 @@
     </div>
 
     <div id="main-container">
-    <div id="about-container">
+    <button id="about-opener" class="closer-opener" onclick="closedToOpen()"><i class="fa-solid fa-angles-left"></i></button>
+    <button id="about-closer" class="closer-opener hidden" onclick="openToClosed()"><i class="fa-solid fa-angles-right"></i></button>
+    <div id="about-container" class="container">
         <img src="\assets\images\favicon.jpg">
         <div id="about-container-text">
             <p>Who is Sym Whysel?</p>
 
             <p>Sym is a designer and stylist with a flair for the strange and glittery. Sym is a college student and 
             an entrepeneur, a maker and a hacker, always moving and always creating. Whether it's stand-up comedy 
-            or 3D printing, Sym brings the absolute best Sym can!</p>
+            or 3D printing, Sym brings their absolute best!</p>
         </div>
     </div>
 
     <!-- Control buttons -->
 
     <ul id="filter-btn-container" class="cloud" role="menu" aria-label="Project tag cloud">
-        <li><button class="filter-btn" onclick="filterSelection('fashion')" data-weight="3"> Fashion Design</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('fashion')" data-weight="3"> Fashion</button></li>
         <li><button class="filter-btn" onclick="filterSelection('upcycling')" data-weight="2"> Upcycling</button></li>
         <li><button class="filter-btn" onclick="filterSelection('cosplay')" data-weight="1"> Cosplay</button></li>
-        <li><button class="filter-btn" onclick="filterSelection('3D')" data-weight="5"> 3D Art</button></li>
+        <li><button class="filter-btn" onclick="filterSelection('3D')" data-weight="5"> 3D</button></li>
         <li><button class="filter-btn" onclick="filterSelection('texturing')" data-weight="2"> Texturing</button></li>
         <li><button class="filter-btn" onclick="filterSelection('modding')" data-weight="3"> Modding</button></li>
         <br>

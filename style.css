@@ -87,14 +87,18 @@ button {
 #about-container {
   position: fixed;
   display: block;
-  right: 50px;
+  right: 3%;
   width: 15%;
   min-width: 200px;
 }
 
+#about-container.hidden.mobile {
+  display: none;
+}
+
 #about-container img {
   width: 150px;
-  display:block;
+  display: block;
   position: relative;
   margin: 0 auto;
   border-radius: 5px;
@@ -109,6 +113,22 @@ button {
   user-select: text !important;
   background-color: #f7f3f7;
   border-radius: 8px;
+}
+
+.closer-opener {
+  position: absolute;
+  display: none;
+  color: #fff;
+  right: 15px;
+  font-size: 24px;
+}
+
+.closer-opener.mobile {
+  display: block;
+}
+
+.closer-opener.hidden {
+  display: none;
 }
 
 #main-container {
@@ -128,7 +148,6 @@ button {
 
 .cloud {
   background-color: #f7f3f7;
-  z-index: 99;
   position: absolute;
   list-style: none;
   padding: 10px;
@@ -171,7 +190,7 @@ ul.cloud button.active {
 }
 
 #filter-div-container {
-    margin: auto 20%;
+    margin: auto auto;
     width: fit-content;
     display: inline-block; 
     background-color: #ffedff;
