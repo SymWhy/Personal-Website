@@ -111,7 +111,7 @@ button {
   margin: 15px auto;
   padding: 10px;
   user-select: text !important;
-  background-color: #f7f3f7;
+  background-color: #fff7ff;
   border-radius: 8px;
 }
 
@@ -121,6 +121,7 @@ button {
   color: #fff;
   right: 15px;
   font-size: 24px;
+  z-index: 999;
 }
 
 .closer-opener.mobile {
@@ -142,15 +143,15 @@ button {
   width: fit-content;
   left: 15px;
   display: flex;
-  background-color: #f7f3f7;
+  background-color: #fff7ff;
   width: 15%;
 }
 
 .cloud {
-  background-color: #f7f3f7;
+  background-color: #fff7ff;
   position: absolute;
   list-style: none;
-  padding: 10px;
+  padding: 25px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -245,33 +246,34 @@ ul.cloud button.active {
     margin: 5% auto; /* 15% from the top and centered */
     padding: 50px;
     border: 1px solid #888;
-    max-width: 900px;
+    width: 55%;
+    min-width: 350px;
     position: relative;
     border-radius: 10px;
   }
 
   .modal-img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: static;
-    margin: auto;
-    width: 610px;
-    height: 610px;
+    display: block;
+    margin: 25px auto;
     background-color: #c7c7c7;
     border-radius: 3px;
+    width: 70%;
+    min-width: 300px;
+    max-width: 700px;
   }
 
   #modal-img {
-    max-width: 600px;
-    max-height: 600px;
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    min-width: 300px;
   }
 
   /* Thumbnails */
   #modal-thumbs {
     position: relative;
     margin: auto;
-    max-width: 620px;
     margin-top: 10px;
   }
 
@@ -290,7 +292,6 @@ ul.cloud button.active {
 
   #modal-caption {
     display: block;
-    width: 610px;
     margin: 15px auto;
     text-align: center;
     font-size: 18px;
@@ -299,7 +300,6 @@ ul.cloud button.active {
 
   #modal-text {
     background-color: #ddd;
-    width: 600px;
     margin: 25px auto;
     padding: 15px;
     border-radius: 5px;
@@ -321,23 +321,26 @@ ul.cloud button.active {
   } 
 
   .nav-arrows {
-    position: absolute;
+    position: relative;
     margin: auto;
-    width: 800px;
-    top: 30%;
   }
 
   /* prev/next arrows */
   .prev-img, .next-img {
-    position: relative;
-    display: inline;
+    position: absolute;
+    display: block;
     font-size: 36px;
     color: #888;
-    right: 0;
+    z-index: 9990;
+    margin-top: 40%;
+  }
+
+  .prev-img {
+    left: -50px;
   }
 
   .next-img {
-    right: -95%;
+    right: -50px;
   }
 
 
