@@ -21,30 +21,32 @@
 <body>
 
     <div id="header">
-        <!-- <div class="dropdown"><i class="fa-solid fa-bars"></i>
-            <div class="dropdown-content">
-                <a href="/index.html">Home</a>
-                <a href="/about.html">About</a>
-                <a href="https://www.etsy.com/shop/symcos">Shop</a>
-                <a href="mailto:simone.whysel@gmail.com">Contact</a>
+        <div class="nav">
+            <div class="hamburger">
+                <span class="fa-solid fa-bars"></span>
             </div>
-        </div> -->
+
+            <div class="item first" style="--i:0">
+                <a href="https://www.etsy.com/shop/symcos" class="fa-brands fa-etsy"></a>
+            </div>
+            
+            <div class="item second" style="--i:1">
+                <a href="https://www.instagram.com/sym.cos/" class="fa-brands fa-instagram"></a>
+            </div>
+            
+            <div class="item third" style="--i:2">
+                <a href="http://www.linkedin.com/in/sym-whysel-815703102" class="fa-brands fa-linkedin"></a>
+            </div>
+            
+            <div class="item fourth" style="--i:3">
+                <a href="https://github.com/SymWhy" class="fa-brands fa-github"></a>
+            </div>
+        </div>
+
+
         <div class="title">Sym Whysel</div>
         <div id="title-moon"><img src="assets/images/mini-moon.png"></div>
         <br>
-        <!-- <div class="socials">
-            <a class="social-btn" href="https://www.facebook.com/profile.php?id=100090669742098" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fa-brands fa-facebook"></i></a>
-            <a class="social-btn" href="https://www.instagram.com/sym.cos/" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-instagram"></i></a>
-            <a class="social-btn" href="http://www.linkedin.com/in/sym-whysel-815703102" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i></a>
-            <a class="social-btn" href="https://github.com/SymWhy" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i></a>
-        </div> -->
-    
     <hr>
     </div>
 
@@ -337,6 +339,12 @@
 </div>
 
 </body>
+
+<script>
+    document.querySelector(".hamburger").addEventListener('click', () => {
+    document.querySelector(".nav").classList.toggle("open");
+});
+</script>
 
 <script src="/responsive.js"></script>
 <script src="/filter.js"></script>
