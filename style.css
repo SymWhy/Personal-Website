@@ -209,8 +209,8 @@ button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  line-height: 2.5rem;
-  border-radius: 5px;;
+  border-radius: 5px;
+  margin: auto 0px;
 }
 
 ul.cloud button[data-weight="1"] { --size: 1; }
